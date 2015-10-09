@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Sphinxio documentation build configuration file, created by
+# Zendrive documentation build configuration file, created by
 # sphinx-quickstart on Thu Oct  8 12:26:41 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -15,7 +15,6 @@
 import sys
 import os
 import shlex
-import sphinx_rtd_theme
 
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -48,7 +47,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Sphinxio'
+project = u'Zendrive'
 copyright = u'2015, Zendrive'
 author = u'Zendrive'
 
@@ -57,7 +56,7 @@ author = u'Zendrive'
 # built documents.
 #
 # The short X.Y version.
-version = '0.0.1'
+version = '0.0.4'
 # The full version, including alpha/beta/rc tags.
 release = '0.0.1'
 
@@ -115,10 +114,10 @@ html_theme = 'sphinx_rtd_theme'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+# html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -140,6 +139,9 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# html_style = 'zendrive_theme.css'
+
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -202,7 +204,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Sphinxiodoc'
+htmlhelp_basename = 'Zendrivedoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -224,7 +226,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'Sphinxio.tex', u'Sphinxio Documentation',
+  (master_doc, 'Zendrive.tex', u'Zendrive Documentation',
    u'Anenth', 'manual'),
 ]
 
@@ -254,7 +256,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'sphinxio', u'Sphinxio Documentation',
+    (master_doc, 'zendrive', u'Zendrive Documentation',
      [author], 1)
 ]
 
@@ -268,8 +270,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'Sphinxio', u'Sphinxio Documentation',
-   author, 'Sphinxio', 'One line description of project.',
+  (master_doc, 'Zendrive', u'Zendrive Documentation',
+   author, 'Zendrive', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -284,3 +286,6 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+def setup(app):
+    app.add_stylesheet("zendrive_theme.css")
