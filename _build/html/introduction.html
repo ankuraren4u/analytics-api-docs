@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Introduction &mdash; Sphinxio 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Sphinxio 0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Zendrive Scores" href="scores.html" />
+    <link rel="prev" title="Zendrive Analytics API" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/dev_intro_2.png" src="_images/dev_intro_2.png" />
+<p>The Zendrive Driver Analytics API provides driver analytics metrics at various aggregation levels via URI paths. To use this API, your application should make a HTTPS request and parse the response. The response format is <a class="reference external" href="http://www.json.org/">JSON</a>. Use standard HTTP GET methods to retrieve driver analytics. We support <a class="reference external" href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">cross-origin resource sharing</a> to allow you to interact securely with our API from a client-side web application. <strong>Remember that you should never expose your secret API key in any public website&#8217;s client-side code</strong>. JSON will be returned in all responses from the API, including errors.</p>
+<p>Since the API is based on open standards, you can use any web development language to access the API.</p>
+</div>
+<div class="section" id="authentication">
+<h1>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h1>
+<p>You authenticate to the Zendrive API endpoint by providing your application key in the request parameters. The application key must be specified as the apikey query parameter. It is a required parameter in every API request. <cite>Sign Up&lt;http://zendrive.com&gt;</cite> to get your API key. Your API key carries many privileges, so keep it secret and secure!</p>
+<p>All API requests must be made over HTTPS. Calls made over plain HTTP will fail.</p>
+</div>
+<div class="section" id="api-host-and-versioning">
+<h1>API Host and Versioning<a class="headerlink" href="#api-host-and-versioning" title="Permalink to this headline">¶</a></h1>
+<p>All API requests must be sent to <code class="docutils literal"><span class="pre">https://api.zendrive.com</span></code>. All API requests must contain the appropriate version in the path. Current API version is <strong>v2</strong>.</p>
+</div>
+<div class="section" id="errors">
+<h1>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h1>
+<p>Zendrive API uses conventional HTTP response codes to indicate success or failure of an API request. Response codes in the 2xx range indicate success, codes in the 4xx range indicate an error that resulted from the provided information (e.g. a required parameter was missing etc.) and codes in the 5xx range indicate an error with Zendrive&#8217;s servers. The error response JSON may have following attributes.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameter</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>error</strong></td>
+<td>A human readable message giving more details about the error.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Introduction</a></li>
+<li><a class="reference internal" href="#authentication">Authentication</a></li>
+<li><a class="reference internal" href="#api-host-and-versioning">API Host and Versioning</a></li>
+<li><a class="reference internal" href="#errors">Errors</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Zendrive Analytics API</a></li>
+      <li>Next: <a href="scores.html" title="next chapter">Zendrive Scores</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/introduction.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Zendrive.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/introduction.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
