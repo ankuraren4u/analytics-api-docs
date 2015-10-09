@@ -1,1 +1,1 @@
-# analytics-api-docs
+Analytics API Documentation
