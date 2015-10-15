@@ -26,7 +26,7 @@ While it may happen rarely, it is possible that your Webhook receive duplicates 
 Trip Scored Notification
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-This notification is sent by Zendrive when a trip uploaded by your application is completely uploaded and scored by the Zendrive backend. Your application can now query the Zendrive API for :ref:`trip-scores-label` for this trip. The notification data block contains the following fields.
+This notification is sent by Zendrive when a trip uploaded by your application is completely uploaded and scored by the Zendrive backend. Your application can now query the Zendrive API for :ref:`trip-score-label` for this trip. The notification data block contains the following fields.
 
 .. csv-table::
     :header: "Field", "Description"

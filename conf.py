@@ -48,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Zendrive'
-copyright = u'2015, Zendrive'
+copyright = u'2015, Zendrive v1'
 author = u'Zendrive'
 
 # The version info for the project you're documenting, acts as replacement for
